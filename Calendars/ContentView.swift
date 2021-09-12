@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var sourceDatas: SourceDatas
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            CalendarRow(items: sourceDatas.daySourceDatas)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(SourceDatas())
     }
 }

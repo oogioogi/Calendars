@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CalendarsApp: App {
+    @StateObject var sourceDatas = SourceDatas()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(sourceDatas)
         }
     }
 }

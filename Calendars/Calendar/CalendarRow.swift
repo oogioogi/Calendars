@@ -12,10 +12,13 @@ struct CalendarRow: View {
     var items: [DaySourceData]
     var body: some View {
         let width = UIScreen.main.bounds.width / 7
-        LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
-            ForEach(items, id: \.id) {  daysource in
-                DayCell(daySourceData: daysource, isOnTap: $isOnTap)
-                    .frame(width: width, height: width)
+
+        VStack {
+            LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
+                ForEach(items, id: \.id) {  daysource in
+                    DayCell(daySourceData: daysource)
+                        .frame(width: width, height: width)
+                }
             }
         }
     }

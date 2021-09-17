@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct CalendarsApp: App {
     @StateObject var sourceDatas = SourceDatas()
+    @StateObject var overTimeInfo = OverTimeInfo()
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(sourceDatas)
+                .environmentObject(overTimeInfo)
         }
     }
 }

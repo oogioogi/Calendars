@@ -10,4 +10,9 @@ import Foundation
 struct DaySourceData: Hashable, Codable {
     var id: Int
     var dayText: Int
+    var overTime: Int
+}
+
+class OverTimeInfo: ObservableObject {
+    @Published var overTime:Int = 0
 }

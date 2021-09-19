@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CalendarRow: View {
+struct CalendarView: View {
     func overtime(overtime: Int) -> Int {
         return overtime
     }
@@ -26,25 +26,19 @@ struct CalendarRow: View {
                     DayOfTheWeekView(dayOfWeek: dayofweek)
                         .frame(width: width, height: width)
                 }
-            }
+            }.padding(.top, 10)
             
             LazyVGrid(columns: Array(repeating: GridItem(), count: 7)) {
                 ForEach(items, id: \.id) {  daysource in
                     DayCell(daySourceData: daysource)
-                        .frame(width: width, height: width)
+                    //DayCellView2(daySourceData: daysource)
+                        //.frame(width: width, height: width)
+                        .frame(idealWidth: width, maxWidth: width, idealHeight: width, maxHeight: width)
                 }
             }
-            idText
             DetailCellView(overTime: overTimeInfo.overTime)
+                .padding(.top)
         }.padding(.horizontal)
-    }
-    
-    var idText: some View {
-        VStack{
-            Text("overTime  \(overTimeInfo.overTime)")
-            Text("id: ")
-        }
-
     }
 }
 
@@ -52,7 +46,7 @@ struct CalendarRow_Previews: PreviewProvider {
     static var daysourceData = SourceDatas().daySourceDatas
     //@Binding var isOnTap: Bool
     static var previews: some View {
-        CalendarRow(items: daysourceData)
+        CalendarView(items: daysourceData)
             .environmentObject(OverTimeInfo())
     }
 }

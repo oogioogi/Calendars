@@ -19,11 +19,13 @@ struct DetailCellView: View {
                     .opacity(0.8)
                     .cornerRadius(20)
                 
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Over Time: \(overTime)")
-                    Text("22222")
+                        .padding(.bottom, 5)
+                    Text("Holy Day Work : 1")
                 }
                 .padding([.top, .leading], 20)
+                .colorInvert()
             }
 
         }

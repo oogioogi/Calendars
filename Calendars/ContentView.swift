@@ -12,11 +12,20 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/)
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-            CalendarRow(items: sourceDatas.daySourceDatas)
+            NavigationView{
+                CalendarView(items: sourceDatas.daySourceDatas)
+                    .navigationBarTitle("Calendar", displayMode: .inline)
+                    .navigationBarItems(trailing: trailingItem)
+            }
+        }
+    }
+    var trailingItem: some View {
+        HStack{
+            NavigationLink(
+                destination: ListCellView(items: sourceDatas.daySourceDatas)) {
+                Image(systemName: "square.and.pencil")
+            }
+            //...
         }
     }
 }
@@ -25,5 +34,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(SourceDatas())
+            .environmentObject(OverTimeInfo())
     }
 }

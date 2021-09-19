@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8634AF9A26F216DC00A6752A /* DayOfTheWeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8634AF9926F216DC00A6752A /* DayOfTheWeekView.swift */; };
+		8638121526F6A6AE00822F7E /* ListCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8638121426F6A6AE00822F7E /* ListCellView.swift */; };
 		863A5F7526F470F900591F95 /* DetailCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863A5F7426F470F900591F95 /* DetailCellView.swift */; };
 		8697DCFE26EE01ED00231119 /* CalendarsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697DCFD26EE01ED00231119 /* CalendarsApp.swift */; };
 		8697DD0026EE01ED00231119 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697DCFF26EE01ED00231119 /* ContentView.swift */; };
@@ -18,10 +19,12 @@
 		8697DD1D26EE0F3800231119 /* DaySourceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697DD1C26EE0F3800231119 /* DaySourceData.swift */; };
 		8697DD2426EE1EA000231119 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8697DD2326EE1EA000231119 /* CalendarView.swift */; };
 		8697DD2D26EE237300231119 /* JsonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8697DD2C26EE237300231119 /* JsonData.json */; };
+		86F148EA26F4B3C700054D99 /* DayCellView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F148E926F4B3C700054D99 /* DayCellView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8634AF9926F216DC00A6752A /* DayOfTheWeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayOfTheWeekView.swift; sourceTree = "<group>"; };
+		8638121426F6A6AE00822F7E /* ListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellView.swift; sourceTree = "<group>"; };
 		863A5F7426F470F900591F95 /* DetailCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCellView.swift; sourceTree = "<group>"; };
 		8697DCFA26EE01ED00231119 /* Calendars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendars.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8697DCFD26EE01ED00231119 /* CalendarsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarsApp.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		8697DD1C26EE0F3800231119 /* DaySourceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaySourceData.swift; sourceTree = "<group>"; };
 		8697DD2326EE1EA000231119 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		8697DD2C26EE237300231119 /* JsonData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonData.json; sourceTree = "<group>"; };
+		86F148E926F4B3C700054D99 /* DayCellView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCellView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8638121126F6A61E00822F7E /* ListCell */ = {
+			isa = PBXGroup;
+			children = (
+				8638121426F6A6AE00822F7E /* ListCellView.swift */,
+			);
+			path = ListCell;
+			sourceTree = "<group>";
+		};
+		8638121226F6A64A00822F7E /* DayCells */ = {
+			isa = PBXGroup;
+			children = (
+				8697DD1926EE049F00231119 /* DayCellView.swift */,
+				86F148E926F4B3C700054D99 /* DayCellView2.swift */,
+				863A5F7426F470F900591F95 /* DetailCellView.swift */,
+				8634AF9926F216DC00A6752A /* DayOfTheWeekView.swift */,
+			);
+			path = DayCells;
+			sourceTree = "<group>";
+		};
 		8697DCF126EE01ED00231119 = {
 			isa = PBXGroup;
 			children = (
@@ -67,8 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				8697DCFD26EE01ED00231119 /* CalendarsApp.swift */,
-				8697DD0D26EE020100231119 /* Resource */,
 				8697DCFF26EE01ED00231119 /* ContentView.swift */,
+				8697DD0D26EE020100231119 /* Resource */,
 				8697DD2226EE1E7B00231119 /* Calendar */,
 				8697DD0126EE01EF00231119 /* Assets.xcassets */,
 				8697DD0626EE01EF00231119 /* Info.plist */,
@@ -98,10 +121,9 @@
 		8697DD2226EE1E7B00231119 /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
-				8697DD1926EE049F00231119 /* DayCellView.swift */,
-				863A5F7426F470F900591F95 /* DetailCellView.swift */,
-				8634AF9926F216DC00A6752A /* DayOfTheWeekView.swift */,
 				8697DD2326EE1EA000231119 /* CalendarView.swift */,
+				8638121126F6A61E00822F7E /* ListCell */,
+				8638121226F6A64A00822F7E /* DayCells */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -186,7 +208,9 @@
 			files = (
 				8697DD2426EE1EA000231119 /* CalendarView.swift in Sources */,
 				8697DD0026EE01ED00231119 /* ContentView.swift in Sources */,
+				86F148EA26F4B3C700054D99 /* DayCellView2.swift in Sources */,
 				8697DD1D26EE0F3800231119 /* DaySourceData.swift in Sources */,
+				8638121526F6A6AE00822F7E /* ListCellView.swift in Sources */,
 				8697DD1626EE043400231119 /* SourceDatas.swift in Sources */,
 				8697DD1A26EE049F00231119 /* DayCellView.swift in Sources */,
 				863A5F7526F470F900591F95 /* DetailCellView.swift in Sources */,

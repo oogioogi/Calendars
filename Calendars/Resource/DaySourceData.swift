@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DaySourceData: Hashable, Codable {
+struct DaySourceData: Codable {
     var id: Int
     var dayText: Int
     var overTime: Int
